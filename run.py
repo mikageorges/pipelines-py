@@ -12,8 +12,8 @@ from pathlib import Path
 import pandas as pd
 import scanpy as sc
 
-repo_dir = Path(__file__).parent
-sys.path.insert(0, str(repo_dir))
+#repo_dir = Path(__file__).parent
+#sys.path.insert(0, str(repo_dir))
 
 
 
