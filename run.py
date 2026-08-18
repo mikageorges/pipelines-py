@@ -106,7 +106,7 @@ n_cluster = clusters_truth_num + args.d_cluster
 
 
 if args.method_name == "scanpy":
-    from methods import run_scanpy
+    from methods.run_scanpy import run_scanpy
     adata = run_scanpy(
         adata,
         n_cluster,
@@ -118,7 +118,7 @@ if args.method_name == "scanpy":
         clustering_info,
     )
 elif args.method_name == "rapids":
-    from methods import run_rapids
+    from methods.run_rapids import run_rapids
     adata = run_rapids(
         adata,
         n_cluster,
