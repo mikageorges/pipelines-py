@@ -12,10 +12,9 @@ from pathlib import Path
 import pandas as pd
 import scanpy as sc
 
-repo_dir = Path(__file__).parent
-sys.path.insert(0, str(repo_dir))
+#repo_dir = Path(__file__).parent
+#sys.path.insert(0, str(repo_dir))
 
-from methods import run_scanpy, run_rapids
 
 
 # Parse command line arguments
@@ -107,6 +106,7 @@ n_cluster = clusters_truth_num + args.d_cluster
 
 
 if args.method_name == "scanpy":
+    from methods.run_scanpy import run_scanpy
     adata = run_scanpy(
         adata,
         n_cluster,
@@ -118,6 +118,7 @@ if args.method_name == "scanpy":
         clustering_info,
     )
 elif args.method_name == "rapids":
+    from methods.run_rapids import run_rapids
     adata = run_rapids(
         adata,
         n_cluster,
