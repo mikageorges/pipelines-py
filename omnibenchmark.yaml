@@ -1,2 +1,3 @@
 entrypoints:
   default: run.py
+  pinned: run_pinned.sh
